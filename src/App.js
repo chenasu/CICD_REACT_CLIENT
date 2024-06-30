@@ -4,7 +4,7 @@ import { useCallback } from 'react';
 
 function App() {
   const backendURL = 'https://cicd-demo-server.onrender.com/';
-  const localUrl = 'http://localhost:3002';
+  // const localUrl = 'http://localhost:3002';
 
   const onNamesSubmit = useCallback(async event => {
     event.preventDefault();
@@ -12,7 +12,7 @@ function App() {
     const last_name = event.target[1].value;
     console.log('recieved ', first_name, ' ', last_name);
 
-    const response = await fetch(localUrl, {
+    const response = await fetch(backendURL, {
       body: JSON.stringify({ first_name: first_name, last_name: last_name }),
       method: 'POST',
       headers: {
