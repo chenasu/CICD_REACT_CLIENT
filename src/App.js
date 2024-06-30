@@ -1,7 +1,6 @@
 import pika from './pika.png';
 import './App.css';
 import { useCallback } from 'react';
-import axios from 'axios';
 
 function App() {
   const backendURL = 'https://cicd-demo-server.onrender.com/';
