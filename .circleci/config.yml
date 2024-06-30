@@ -29,4 +29,4 @@ workflows:
       - test-node
       - deploy: 
           requires: 
-            test-node
+            [test-node]
